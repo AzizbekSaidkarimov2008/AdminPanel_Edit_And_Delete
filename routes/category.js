@@ -23,13 +23,22 @@ router.get('/add', (req, res) => {
     })
 })
 
+router.get('/widgets', (req, res) => {
+    res.render('admin/widgets', {
+        title: 'Kategoriya yaratish',
+        header: 'Kategoriya yaratish',
+        layout: 'main',
+    })
+})
+
 router.post('/add', fileUpload.single('categoryIcon'), async (req, res) => {
-    const { categoryName, sortNumber } = req.body
+    const { categoryName, sortNumber,categorydescription } = req.body
     const categoryIcon = req.file.filename
     const category = new Category({
         categoryName,
         sortNumber,
-        categoryIcon
+        categoryIcon,
+        categorydescription
     })
     await category.save()
     res.redirect('/admin/category/read')
@@ -46,18 +55,16 @@ router.get("/edit/:id", async (req, res) => {
 
 router.post("/edit/:id", async (req, res) => {
     console.log(req.body);
-    const { categoryName, sortNumber } = req.body
+    const { categoryName, sortNumber, categorydescription } = req.body
     // const asd = req.body
-
-
     await Category.findByIdAndUpdate(req.params.id, {
         categoryName,
-        sortNumber
+        sortNumber,
+        categorydescription
     }, (err) => {
         if (err) {
             console.log(err);
         } else {
-
             res.redirect('/admin/category/read')
         }
     })

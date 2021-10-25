@@ -18,9 +18,9 @@
         </div>
         <!-- Sidebar Menu -->
         <nav class="mt-2">
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <ul class="nav nav-pills nav-sidebar" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
-                    <a href="#" class="nav-link active">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Kategoriyalar
@@ -40,7 +40,15 @@
                                 <p>Ko'rish</p>
                             </a>
                         </li>
+                        
                     </ul>
+                    <li class="nav-item active">
+                            <a href="/admin/category/widgets" class="nav-link" style="color: #fff !important;">
+                                {{!-- <i class="far fa-circle nav-icon"></i> --}}
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>Widgets<span class="right badge badge-danger">New</span></p>
+                            </a>
+                    </li>
                 </li>
             </ul>
         </nav>

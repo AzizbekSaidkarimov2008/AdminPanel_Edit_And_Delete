@@ -1,3 +1,4 @@
+const { text } = require('express')
 const { Schema, model } = require('mongoose')
 
 const CategorySchema = new Schema({
@@ -11,6 +12,10 @@ const CategorySchema = new Schema({
     },
     sortNumber: {
         type: Number,
+        required: true
+    },
+    categorydescription: {
+        type: String,
         required: true
     }
 })
