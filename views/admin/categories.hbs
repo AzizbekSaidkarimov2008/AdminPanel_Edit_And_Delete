@@ -12,8 +12,8 @@
                             <h2 class="lead"><b>{{categoryName}}</b></h2>
                             <p class="text-muted text-sm"><b>About:</b> {{categorydescription}}</p>
                             <ul class="ml-4 mb-0 fa-ul text-muted">
-                                <li class="small"><span class="price">Price:</span> <span
-                                        class="sortNumber">{{sortNumber}}</span></li>
+                                <li class="small">{{!-- <span class="price">Price:</span> --}}{{!-- <span
+                                        class="sortNumber">{{sortNumber}}</span> --}}</li>
                             </ul>
                         </div>
                         <div class="col-6 text-center">
@@ -23,10 +23,8 @@
                 </div>
                 <div class="card-footer">
                     <div class="text-right">
-                        <a href="/admin/category/delete/{{id}}"><button
-                                class="btn btn-sm bg-teal">O'chirish</button></a>
-                        <a href="/admin/category/edit/{{id}}"><button
-                                class="{{!-- btn btn-warning  --}}btn btn-sm btn-primary">O'zgartirish</button></a>
+                        <a href="/admin/category/delete/{{id}}" class="btn btn-sm bg-teal">O'chirish</a>
+                        <a href="/admin/category/edit/{{id}}" class="btn btn-sm btn-primary">O'zgartirish</a>
                     </div>
                 </div>
             </div>
