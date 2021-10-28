@@ -27,7 +27,7 @@ router.get("/add", (req, res) => {
 router.get("/widgets", (req, res) => {
   res.render("admin/widgets", {
     title: "Kategoriya yaratish",
-    header: "Kategoriya yaratish",
+    header: "Kategoriya",
     layout: "main",
   });
 });
